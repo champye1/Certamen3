@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario de Acceso</title>
+    <style>
+        .error-message {
+            color: red;
+        }
+        .success-message {
+            color: green;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
+    <script defer src="script1.js"></script>
+</head>
+<body>
+    <h1>Formulario de Acceso</h1>
+    <form id="accessForm">
+
+
+        <label for="Cargo">Cargo:</label>
+        <input type="text" id="Cargo" name="Cargo" required><br><br>
+
+        <label for="Clave">Clave:</label>
+        <input type="password" id="Clave" name="Clave" required><br><br>
+
+        <button type="button" onclick="validarAcceso()">Enviar</button>
+        <p id="error-message" class="error-message"></p>
+    </form>
+
+    <h2>Datos Ingresados:</h2>
+    <table id="EmpleadoTable" border="1">
+        <thead>
+            <tr>
+                <th>Cargo Empleado</th>
+                <th>Clave</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+</html>

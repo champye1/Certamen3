@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Juegos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .error-message {
+            color: red;
+        }
+        .success-message {
+            color: green;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    </style>
+    <script defer src="script2.js"></script>
+</head>
+<body>
+    <h1>Formulario de Venta de Juegos</h1>
+    <form id="gameForm">
+        <label for="nombreJuego">Nombre del Juego:</label>
+        <input type="text" id="nombreJuego" name="nombreJuego" required><br><br>
+
+        <label for="valorJuego">Valor:</label>
+        <input type="number" id="valorJuego" name="valorJuego" required><br><br>
+
+        <label for="cantidadJuego">Cantidad:</label>
+        <input type="number" id="cantidadJuego" name="cantidadJuego" required><br><br>
+
+        <button type="button" onclick="registrarJuego()">Registrar</button>
+        <button type="button" onclick="calcularCostoTotal()">Total Costo de Compra</button>
+        <button type="button" onclick="calcularTotalRecaudado()">Total Recaudado por las Ventas</button>
+        <p id="error-message" class="error-message"></p>
+    </form>
+
+    <h2>Juegos Registrados:</h2>
+    <table id="juegosTable" border="1">
+        <thead>
+            <tr>
+                <th>Nombre del Juego</th>
+                <th>Valor</th>
+                <th>Cantidad</th>
+                <th>Costo Total</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Resultados:</h2>
+    <p>Total Costo de Compra: <span id="totalCosto">0</span></p>
+    <p>Total Recaudado por las Ventas: <span id="totalRecaudado">0</span></p>
+</body>
+</html>
